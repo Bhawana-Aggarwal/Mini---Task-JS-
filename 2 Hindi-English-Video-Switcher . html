@@ -21,7 +21,7 @@
 
     <div>
         <video id="convert" height="400px" controls>
-            <source id="videoSource" src="english.mp4" type="video/mp4">
+            <source id="videoSource" src="2.2 english.mp4" type="video/mp4">
         </video>
     </div> 
 
@@ -31,9 +31,9 @@
 
         function convertor(lang){
             if(lang === 'English'){
-                source.src = "english.mp4";
+                source.src = "2.2 english.mp4";
             } else if(lang === 'Hindi'){ 
-                source.src = "hindi.mp4"; 
+                source.src = "2.1 hindi.mp4"; 
             }
             video.load(); // Load the new video
             video.play(); // Optional: Play the new video automatically
