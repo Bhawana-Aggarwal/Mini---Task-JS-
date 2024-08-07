@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background changer according to screen width.</title>
+</head>
+
+<body>
+    
+    <script>
+        const body = document.body;
+      
+        window.addEventListener("resize", changeBackgroundColor);
+        changeBackgroundColor();    
+
+        function changeBackgroundColor() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth < 300) {
+                body.style.backgroundColor = "green"; // change background color to red for small screens
+            } else if (screenWidth < 600) {
+                body.style.backgroundColor = "orange"; // change background color to orange for medium screens
+            } else {
+                body.style.backgroundColor = "blue"; // change background color to blue for large screens
+            }
+        }
+    </script>
+</body>
+
+</html>
