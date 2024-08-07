@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindi-English language convertor</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+        video{
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" onclick="convertor('English')">ENGLISH</button>
+    <button type="button" onclick="convertor('Hindi')">HINDI</button>
+    <button type="button" onclick="stopVideo()">PAUSE</button>
+    <button type="button" onclick="resumeVideo()">RESUME</button>
+
+    <div>
+        <video id="convert" height="400px" controls>
+            <source id="videoSource" src="english.mp4" type="video/mp4">
+        </video>
+    </div> 
+
+    <script>
+        let video = document.getElementById('convert');
+        let source = document.getElementById('videoSource');
+
+        function convertor(lang){
+            if(lang === 'English'){
+                source.src = "english.mp4";
+            } else if(lang === 'Hindi'){ 
+                source.src = "hindi.mp4"; 
+            }
+            video.load(); // Load the new video
+            video.play(); // Optional: Play the new video automatically
+        }
+
+        function stopVideo(){
+            video.pause(); // Stop the video
+            // video.currentTime = 0; // Reset video to start
+        }
+
+        function resumeVideo(){
+            video.play(); 
+        }
+    </script>
+</body>
+</html>
+ 
