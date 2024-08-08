@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<-- Bootstrap CSS for styling-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Event Exercise</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ARITHMETIC CALCULATION</h1>
+    <input id="num1" placeholder="Enter 1st number" oninput="cal()">
+    <input id="num2" placeholder="Enter 2nd number" oninput="cal()"><br>
+    <div class="result">
+        Addition:<input id="add_res" placeholder="RESULT" readonly><br>
+        Subtraction:<input id="sub_res" placeholder="RESULT" readonly><br>
+        Multiplication:<input id="mul_res" placeholder="RESULT" readonly><br>
+        DIVISION :<input id="div_res" placeholder="RESULT" readonly><br>
+        MODULAS :<input id="mod_res" placeholder="RESULT" readonly><br>
+    </div>
+
+    <script>
+        function cal() {
+           //.......... Get the input values and convert them to numbers (default to 0 if empty)
+            let num1 = parseFloat(document.getElementById('num1').value) || 0;
+            let num2 = parseFloat(document.getElementById('num2').value) || 0;
+            let add_res = num1 + num2;
+            let sub_res = num1 - num2;
+            let mul_res = num1 * num2;
+            let div_res = num1 / num2;
+            let mod_res = num1 % num2;
+
+            //......... Update the result fields with the calculation results
+            document.getElementById('add_res').value = add_res;
+            document.getElementById('sub_res').value = sub_res;
+            document.getElementById('mul_res').value = mul_res;
+            document.getElementById('div_res').value = div_res;
+            document.getElementById('mod_res').value = mod_res;
+        }
+
+    </script>
+</body>
+
+</html>
